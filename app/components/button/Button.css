@@ -1,0 +1,50 @@
+$blue: #0098db;
+
+.button {
+  display: flex;
+  box-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+  box-sizing: border-box;
+  animation: MyAnimation 2s forwards infinite;
+  transform: rotate(45deg);
+  background-image: linear-gradient(to bottom, #444, #999);
+  padding: 10px 20px;
+  border-radius: 3px;
+  background-color: $blue;
+  margin: 20px;
+  font-family: 'Gotham';
+  cursor: pointer;
+}
+
+.button :global( .test ){
+  color: red;
+}
+
+@keyframes MyAnimation {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 20%;
+  }
+}
+
+
+.default {
+  display: inline-block;
+  min-width: 70px;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  font-family: 'Lato';
+  color: white;
+}
+
+.green {
+  composes: default;
+  background-color: #88b941;
+}
+
+.blue {
+  composes: default;
+  background-color: #0098db;
+}
